@@ -32,7 +32,8 @@ extension SettingsViewController: UITableViewDelegate {
         case .toggle: break // do nothing for toggle cells
         default: // create DetailViewController and go
             let detailVC = DetailViewController()
-            detailVC.setDetailText(model.title)
+            let iconImage = UIImage(named: model.iconName) ?? UIImage(systemName: model.iconName) ?? UIImage(systemName: "exclamationmark.triangle.fill")
+            detailVC.setDetailTextAndIcon(model.title, icon: iconImage)
             navigationController?.pushViewController(detailVC, animated: true)
             print("Нажата ячейка \(model.title)")
         }
