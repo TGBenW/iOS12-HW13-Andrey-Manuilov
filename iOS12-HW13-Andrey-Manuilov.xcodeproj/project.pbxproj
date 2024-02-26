@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B650CE1A2B8D37D400CB88B7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650CE192B8D37D400CB88B7 /* Colors.swift */; };
+		B650CE1C2B8D3A6400CB88B7 /* SettingsModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650CE1B2B8D3A6400CB88B7 /* SettingsModelProvider.swift */; };
 		B6E0F3F52B68296000BE238A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0F3F42B68296000BE238A /* AppDelegate.swift */; };
 		B6E0F3F72B68296000BE238A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0F3F62B68296000BE238A /* SceneDelegate.swift */; };
 		B6E0F3F92B68296000BE238A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0F3F82B68296000BE238A /* SettingsViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B650CE192B8D37D400CB88B7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B650CE1B2B8D3A6400CB88B7 /* SettingsModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModelProvider.swift; sourceTree = "<group>"; };
 		B6E0F3F12B68296000BE238A /* iOS12-HW13-Andrey-Manuilov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW13-Andrey-Manuilov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0F3F42B68296000BE238A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0F3F62B68296000BE238A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				B6E0F41E2B68343D00BE238A /* SettingCellModel.swift */,
+				B650CE192B8D37D400CB88B7 /* Colors.swift */,
+				B650CE1B2B8D3A6400CB88B7 /* SettingsModelProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E0F41F2B68343D00BE238A /* SettingCellModel.swift in Sources */,
+				B650CE1A2B8D37D400CB88B7 /* Colors.swift in Sources */,
 				B6E0F3F92B68296000BE238A /* SettingsViewController.swift in Sources */,
 				B6E0F4222B68422E00BE238A /* SettingsViewController+Extensions.swift in Sources */,
+				B650CE1C2B8D3A6400CB88B7 /* SettingsModelProvider.swift in Sources */,
 				B6E0F41D2B68342C00BE238A /* SettingTableViewCell.swift in Sources */,
 				B6E0F3F52B68296000BE238A /* AppDelegate.swift in Sources */,
 				B6E0F3F72B68296000BE238A /* SceneDelegate.swift in Sources */,

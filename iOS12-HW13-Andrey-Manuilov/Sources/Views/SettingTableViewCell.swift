@@ -127,7 +127,7 @@ class SettingTableViewCell: UITableViewCell {
             iconImageView.image = UIImage(systemName: "exclamationmark.triangle.fill")
         }
         titleLabel.text = model.title
-        iconContainerView.backgroundColor = model.iconBackgroundColor
+        iconContainerView.backgroundColor = model.iconBackgroundColor.toUIColor
             
         subtitleLabel.isHidden = true // hide elements initially, will show based on accessory type
         badgeContainerView.isHidden = true

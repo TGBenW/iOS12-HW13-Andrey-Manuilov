@@ -4,7 +4,7 @@ import UIKit
 struct SettingCellModel {
     let iconName: String
     let title: String
-    let iconBackgroundColor: UIColor
+    let iconBackgroundColor: ModelColor
     var accessoryType: AccessoryType
     var action: ((Bool) -> Void)?
 }
