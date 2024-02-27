@@ -9,7 +9,7 @@ class SettingTableViewCell: UITableViewCell {
 
     private let iconContainerView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 8 // rounded corners for the icon container
+        view.layer.cornerRadius = CellLayout.iconCornerRadius // rounded corners for the icon container
         view.layer.masksToBounds = true
         return view
     }()
@@ -40,14 +40,14 @@ class SettingTableViewCell: UITableViewCell {
     private let subtitleLabel: UILabel = { // subtitles settings
         let label = UILabel()
         label.textColor = .systemGray // gray color
-        label.font = .systemFont(ofSize: 16) // default font size
+        label.font = .systemFont(ofSize: CellLayout.subtitleFontSize) // default font size
         return label
     }()
     
     private let badgeContainerView: UIView = { // badge container settings
         let view = UIView()
         view.backgroundColor = .systemRed // red bg
-        view.layer.cornerRadius = 15 // round corners
+        view.layer.cornerRadius = CellLayout.badgeCornerRadius // round corners
         return view
     }()
     
@@ -55,14 +55,13 @@ class SettingTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .center // center alignment
         label.textColor = .white // white text color
-        label.font = .systemFont(ofSize: 16) // font size
+        label.font = .systemFont(ofSize: CellLayout.subtitleFontSize) // font size
         return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
-        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -83,33 +82,33 @@ class SettingTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         iconContainerView.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 32, height: 32))
-            make.leading.equalToSuperview().inset(16)
+            make.size.equalTo(CellLayout.iconSize)
+            make.leading.equalToSuperview().inset(CellLayout.defaultInset)
             make.centerY.equalToSuperview()
         }
         
         iconImageView.snp.makeConstraints { make in
-            make.size.equalTo(iconContainerView.snp.size).multipliedBy(0.72)
+            make.size.equalTo(iconContainerView.snp.size).multipliedBy(CellLayout.iconImageScale)
             make.center.equalTo(iconContainerView.snp.center)
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(iconContainerView.snp.trailing).offset(16)
+            make.leading.equalTo(iconContainerView.snp.trailing).offset(CellLayout.defaultInset)
             make.centerY.equalToSuperview()
         }
         
         accessoryImageView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(16)
+            make.trailing.equalToSuperview().inset(CellLayout.defaultInset)
             make.centerY.equalToSuperview()
         }
         
         subtitleLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(accessoryImageView.snp.leading).offset(-8)
+            make.trailing.equalTo(accessoryImageView.snp.leading).offset(CellLayout.accessoryImageOffset)
             make.centerY.equalToSuperview()
         }
         
         badgeContainerView.snp.makeConstraints { make in
-            make.trailing.equalTo(accessoryImageView.snp.leading).offset(-8)
+            make.trailing.equalTo(accessoryImageView.snp.leading).offset(CellLayout.accessoryImageOffset)
             make.centerY.equalToSuperview()
         }
         
@@ -162,17 +161,31 @@ class SettingTableViewCell: UITableViewCell {
 
         subtitleLabel.snp.remakeConstraints { make in // update constraints for subtitle and badge
             make.centerY.equalToSuperview()
-            make.trailing.equalTo(accessoryImageView.snp.leading).offset(-8)
+            make.trailing.equalTo(accessoryImageView.snp.leading).offset(CellLayout.accessoryImageOffset)
         }
         
         badgeContainerView.snp.remakeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalTo(accessoryImageView.snp.leading).offset(-8)
-            make.width.height.equalTo(30)
+            make.trailing.equalTo(accessoryImageView.snp.leading).offset(CellLayout.accessoryImageOffset)
+            make.width.height.equalTo(CellLayout.badgeDiameter)
         }
         
         badgeLabel.snp.remakeConstraints { make in
             make.center.equalTo(badgeContainerView.snp.center)
         }
+    }
+}
+
+// MARK: - Extension with sizes
+extension SettingTableViewCell {
+    struct CellLayout {
+        static let iconSize = CGSize(width: 32, height: 32)
+        static let iconCornerRadius: CGFloat = 8
+        static let iconImageScale: CGFloat = 0.72
+        static let defaultInset: CGFloat = 16
+        static let badgeDiameter: CGFloat = 30
+        static let subtitleFontSize: CGFloat = 16
+        static let badgeCornerRadius: CGFloat = 15
+        static let accessoryImageOffset: CGFloat = -8
     }
 }
