@@ -55,6 +55,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B650CE1D2B8D68A900CB88B7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B650CE1E2B8D68B400CB88B7 /* Controller */,
+				B650CE202B8D68C600CB88B7 /* View */,
+				B650CE1F2B8D68BC00CB88B7 /* Model */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B650CE1E2B8D68B400CB88B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6E0F3F82B68296000BE238A /* SettingsViewController.swift */,
+				B6E0F41A2B68341A00BE238A /* DetailViewController.swift */,
+				B6E0F4202B68421F00BE238A /* Extensions */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B650CE1F2B8D68BC00CB88B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6E0F41E2B68343D00BE238A /* SettingCellModel.swift */,
+				B650CE192B8D37D400CB88B7 /* Colors.swift */,
+				B650CE1B2B8D3A6400CB88B7 /* SettingsModelProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B650CE202B8D68C600CB88B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6E0F41C2B68342C00BE238A /* SettingTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B6E0F3E82B68296000BE238A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +123,7 @@
 		B6E0F40C2B682B5000BE238A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6E0F40F2B682BCA00BE238A /* Storyboards */,
 				B6E0F4102B682C1200BE238A /* Assets */,
 				B6E0F4112B682C1900BE238A /* Configuration */,
 			);
@@ -94,12 +133,8 @@
 		B6E0F40D2B682B5900BE238A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B6E0F4202B68421F00BE238A /* Extensions */,
-				B6E0F4192B68340900BE238A /* Models */,
-				B6E0F4182B68340000BE238A /* Views */,
-				B6E0F4172B68338100BE238A /* ViewControllers */,
+				B650CE1D2B8D68A900CB88B7 /* Scenes */,
 				B6E0F40E2B682BC400BE238A /* App */,
-				B6E0F40F2B682BCA00BE238A /* Storyboards */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -135,33 +170,6 @@
 				B6E0F4022B68296200BE238A /* Info.plist */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		B6E0F4172B68338100BE238A /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B6E0F3F82B68296000BE238A /* SettingsViewController.swift */,
-				B6E0F41A2B68341A00BE238A /* DetailViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B6E0F4182B68340000BE238A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B6E0F41C2B68342C00BE238A /* SettingTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B6E0F4192B68340900BE238A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B6E0F41E2B68343D00BE238A /* SettingCellModel.swift */,
-				B650CE192B8D37D400CB88B7 /* Colors.swift */,
-				B650CE1B2B8D3A6400CB88B7 /* SettingsModelProvider.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B6E0F4202B68421F00BE238A /* Extensions */ = {
